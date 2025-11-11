@@ -56,17 +56,33 @@ function helloWorld(message){
 }
 
 //p10
-const fullNames = [
-    { first: 'Albus', last: 'Dumbledore' },
-    { first: 'Harry', last: 'Potter' },
-    { first: 'Hermione', last: 'Granger' },
-    { first: 'Ron', last: 'Weasley' },
-    { first: 'Rubeus', last: 'Hagrid' },
-    { first: 'Minerva', last: 'McGonagall' },
-    { first: 'Severus', last: 'Snape' }];
+// const fullNames = [
+//     { first: 'Albus', last: 'Dumbledore' },
+//     { first: 'Harry', last: 'Potter' },
+//     { first: 'Hermione', last: 'Granger' },
+//     { first: 'Ron', last: 'Weasley' },
+//     { first: 'Rubeus', last: 'Hagrid' },
+//     { first: 'Minerva', last: 'McGonagall' },
+//     { first: 'Severus', last: 'Snape' }];
 
-const fistNames = fullNames.map(function (item){
-    return item.first
-})
+// const fistNames = fullNames.map(function (item){
+//     return item.first
+// })
 
-console.log(fistNames)
+// console.log(fistNames)
+
+//pp 18
+function validUserNames(usernames = []){
+
+    const checkedUsers = usernames.filter(item => {
+        return item.length <10;
+    })
+
+    return checkedUsers;
+}
+
+
+//pp21
+function allEvens(nums = []){
+    return nums.every((num) => num%2 == 0)
+}
