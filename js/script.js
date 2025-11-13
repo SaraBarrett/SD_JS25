@@ -11,14 +11,12 @@
 
 // console.log(`o meu nome é ${myName} e o meu ano de nascimento é ${myBirthYear}.`)
 
-
 // let userName = prompt('qual é o teu nome');
 // console.log(userName)
 
 // const students = ['Rui', null, 1455, 'Rute'];
 // students[1] = 'Jorge';
 // console.log(students)
-
 
 // const cesaeCursos = [
 //     ['Diogo', 'Ricardo', 'Iva', [9, null], 'Catarina', 'Taís'],
@@ -51,8 +49,8 @@
 // curso.hours =1000;
 // console.log(curso)
 
-function helloWorld(message){
-    alert('Olá '+ message);
+function helloWorld(message) {
+  alert("Olá " + message);
 }
 
 //p10
@@ -72,17 +70,127 @@ function helloWorld(message){
 // console.log(fistNames)
 
 //pp 18
-function validUserNames(usernames = []){
+function validUserNames(usernames = []) {
+  const checkedUsers = usernames.filter((item) => {
+    return item.length < 10;
+  });
 
-    const checkedUsers = usernames.filter(item => {
-        return item.length <10;
-    })
-
-    return checkedUsers;
+  return checkedUsers;
 }
 
-
 //pp21
-function allEvens(nums = []){
-    return nums.every((num) => num%2 == 0)
+function allEvens(nums = []) {
+  return nums.every((num) => num % 2 == 0);
+}
+
+//ex 3 da tarefa 1
+function generatePass() {
+  const stuff = [
+    "!",
+    "@",
+    "#",
+    "$",
+    "%",
+    "^",
+    "&",
+    "*",
+    "(",
+    ")",
+    "-",
+    "_",
+    "=",
+    "+",
+    "{",
+    "}",
+    "[",
+    "]",
+    ":",
+    ";",
+    '"',
+    "'",
+    "<",
+    ">",
+    ",",
+    ".",
+    "?",
+    "/",
+    "|",
+    "\\",
+    "`",
+    "~",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  let pass = "";
+  let passLength = prompt("qual é o tamanho da pass?");
+  console.log(passLength);
+
+
+  for(let i = 0; i<passLength; i++){
+    let randomIndex = Math.floor(Math.random() * stuff.length);
+    let myStr = stuff[randomIndex];
+    pass = pass + myStr;
+  }
+
+  console.log(pass)
 }
